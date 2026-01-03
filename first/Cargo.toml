@@ -1,0 +1,13 @@
+[package]
+name = "first"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 'z'  # 优化大小
+lto = true       # 链接时优化
+codegen-units = 1
+panic = 'abort'  # 不使用展开的panic
+strip = true     # 剥离符号
+
+[dependencies]
